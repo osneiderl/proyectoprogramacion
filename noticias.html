@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xplambeit - Noticias de Fútbol</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary">X</span>planbeit
+                Xplambeit
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partidos.html">Partidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estadisticas.html">Estadísticas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clasificaciones.html">Clasificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="noticias.html">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera de la sección de noticias -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold">Noticias de Fútbol</h1>
+                    <p class="lead">Las últimas novedades del mundo del fútbol en un solo lugar</p>
+                </div>
+                <div class="col-md-4">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar noticias..." aria-label="Buscar">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filtros de categorías -->
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="mb-0">Filtrar por categoría:</h5>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-primary active">Todas</button>
+                <button type="button" class="btn btn-outline-primary">La Liga</button>
+                <button type="button" class="btn btn-outline-primary">Premier League</button>
+                <button type="button" class="btn btn-outline-primary">Serie A</button>
+                <button type="button" class="btn btn-outline-primary">Bundesliga</button>
+                <button type="button" class="btn btn-outline-primary">Ligue 1</button>
+                <button type="button" class="btn btn-outline-primary">Champions League</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Noticia destacada -->
+    <section class="container mt-4">
+        <div class="card mb-5 shadow">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="img/1o.jfif" class="img-fluid rounded-start h-100 object-fit-cover" alt="Noticia destacada">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body d-flex flex-column h-100">
+                        <span class="badge bg-danger mb-2">DESTACADO</span>
+                        <h2 class="card-title">El Real Madrid se proclama campeón de la Champions League</h2>
+                        <p class="card-text">El equipo blanco consiguió su decimoquinta Copa de Europa tras vencer en la final al Manchester City con un marcador de 2-1 en un partido lleno de emoción y buen fútbol.</p>
+                        <div class="d-flex align-items-center mt-2">
+                            <img src="img/autor1.jpg" class="rounded-circle me-2" width="40" height="40" alt="Autor">
+                            <div>
+                                <p class="mb-0 fw-bold">Carlos Martínez</p>
+                                <small class="text-muted">Hace 2 horas</small>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-auto">Leer más <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listado de noticias -->
+    <section class="container mt-4">
+        <h3 class="mb-4 border-bottom pb-2">Últimas Noticias</h3>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Noticia 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n4.avif" class="card-img-top" alt="Noticia 1">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">La Liga</span>
+                        <h5 class="card-title">El Barcelona ficha a una nueva estrella para la próxima temporada</h5>
+                        <p class="card-text">El club catalán ha anunciado la incorporación de un nuevo delantero que promete revolucionar el ataque azulgrana.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 5 horas</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Noticia 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n3.avif" class="card-img-top" alt="Noticia 2">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Premier League</span>
+                        <h5 class="card-title">El Liverpool se refuerza con dos nuevos fichajes</h5>
+                        <p class="card-text">El equipo de Anfield ha confirmado la llegada de dos nuevos jugadores para reforzar su plantilla de cara a la próxima temporada.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 8 horas</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Noticia 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n2.avif" class="card-img-top" alt="Noticia 3">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Bundesliga</span>
+                        <h5 class="card-title">El Bayern Múnich presenta a su nuevo entrenador</h5>
+                        <p class="card-text">El gigante alemán ha anunciado el nombre del técnico que dirigirá al equipo durante las próximas tres temporadas.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 12 horas</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Noticia 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n1.jfif" class="card-img-top" alt="Noticia 4">
+                    <div class="card-body">
+                        <span class="badge bg-info text-dark mb-2">Serie A</span>
+                        <h5 class="card-title">La Juventus renueva a su estrella por tres temporadas más</h5>
+                        <p class="card-text">El club turinés ha anunciado la renovación de su jugador más importante, asegurando su continuidad hasta 2026.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 1 día</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Noticia 5 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n5.avif" class="card-img-top" alt="Noticia 5">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Ligue 1</span>
+                        <h5 class="card-title">El PSG se prepara para una revolución en su plantilla</h5>
+                        <p class="card-text">El equipo parisino planea una importante reestructuración con varias salidas y llegadas para la próxima temporada.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 1 día</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Noticia 6 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/n7.avif" class="card-img-top" alt="Noticia 6">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Champions League</span>
+                        <h5 class="card-title">La UEFA anuncia cambios en el formato de la Champions</h5>
+                        <p class="card-text">El máximo organismo del fútbol europeo ha confirmado modificaciones en el formato de la competición a partir de la próxima temporada.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Hace 2 días</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Paginación -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Suscripción a newsletter -->
+    <section class="bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h3>¡Mantente informado!</h3>
+                    <p class="lead">Suscríbete a nuestro boletín para recibir las últimas noticias de fútbol directamente en tu correo.</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-primary btn-lg">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Xplambeit</h5>
+                    <p>Tu portal de estadísticas y noticias de fútbol más completo.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3 mb-md-0">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="partidos.html" class="text-white">Partidos</a></li>
+                        <li><a href="estadisticas.html" class="text-white">Estadísticas</a></li>
+                        <li><a href="clasificaciones.html" class="text-white">Clasificaciones</a></li>
+                        <li><a href="noticias.html" class="text-white">Noticias</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Ligas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">La Liga</a></li>
+                        <li><a href="#" class="text-white">Premier League</a></li>
+                        <li><a href="#" class="text-white">Serie A</a></li>
+                        <li><a href="#" class="text-white">Bundesliga</a></li>
+                        <li><a href="#" class="text-white">Ligue 1</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> universidad popular del cesar</p>
+                        <p><i class="fas fa-phone me-2"></i> +3215711025</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@xplambeit.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Xplambeit. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white">Política de privacidad</a> | 
+                        <a href="#" class="text-white">Términos y condiciones</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

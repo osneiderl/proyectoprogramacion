@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos - Xplambeit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">XPLAMBEIT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="partidos.html">Partidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estadisticas.html">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="posiciones.html">Posiciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Partidos</h1>
+        <p class="lead">Resultados y próximos encuentros</p>
+    </header>
+
+    <!-- Filtros -->
+    <section class="container mt-3">
+        <div class="card shadow-sm mb-3">
+            <div class="card-body">
+                <div class="row g-2">
+                    <div class="col-md-3">
+                        <select class="form-select" id="liga-select">
+                            <option selected>Todas las ligas</option>
+                            <option>La Liga</option>
+                            <option>Premier League</option>
+                            <option>Serie A</option>
+                            <option>Bundesliga</option>
+                            <option>Ligue 1</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="equipo-select">
+                            <option selected>Todos los equipos</option>
+                            <option>Real Madrid</option>
+                            <option>Barcelona</option>
+                            <option>Manchester City</option>
+                            <option>Liverpool</option>
+                            <option>Bayern Munich</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="fecha-select">
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100">Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pestañas -->
+    <section class="container mb-4">
+        <ul class="nav nav-tabs mb-3" id="partidosTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="proximos-tab" data-bs-toggle="tab" data-bs-target="#proximos" type="button" role="tab">Próximos partidos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="jugados-tab" data-bs-toggle="tab" data-bs-target="#jugados" type="button" role="tab">Partidos jugados</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="partidosTabsContent">
+            <!-- Próximos partidos -->
+            <div class="tab-pane fade show active" id="proximos" role="tabpanel">
+                <div class="row">
+                    <!-- Partido 1 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-primary">La Liga</span>
+                                <span>Jornada 10</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Real Madrid</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">15 Oct 2023</p>
+                                            <h5>20:00</h5>
+                                            <span class="badge bg-warning text-dark">Por jugar</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="mt-2 mb-0">Barcelona</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Santiago Bernabéu</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 2 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-success">Premier League</span>
+                                <span>Jornada 8</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                        <p class="mt-2 mb-0">Liverpool</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">16 Oct 2023</p>
+                                            <h5>16:30</h5>
+                                            <span class="badge bg-warning text-dark">Por jugar</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Man. City</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Anfield</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 3 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-info text-dark">Serie A</span>
+                                <span>Jornada 9</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                      
+                                        <p class="mt-2 mb-0">Juventus</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">17 Oct 2023</p>
+                                            <h5>18:45</h5>
+                                            <span class="badge bg-warning text-dark">Por jugar</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Inter</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Allianz Stadium</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 4 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-warning text-dark">Bundesliga</span>
+                                <span>Jornada 7</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Bayern</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">18 Oct 2023</p>
+                                            <h5>19:30</h5>
+                                            <span class="badge bg-warning text-dark">Por jugar</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Dortmund</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Allianz Arena</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partidos jugados -->
+            <div class="tab-pane fade" id="jugados" role="tabpanel">
+                <div class="row">
+                    <!-- Partido 1 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-primary">La Liga</span>
+                                <span>Jornada 9</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Atlético</p>
+                                        <h4>2</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">8 Oct 2023</p>
+                                            <span class="badge bg-success">Finalizado</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Sevilla</p>
+                                        <h4>1</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Metropolitano</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Resumen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 2 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-success">Premier League</span>
+                                <span>Jornada 7</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                       
+                                        <p class="mt-2 mb-0">Arsenal</p>
+                                        <h4>3</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">7 Oct 2023</p>
+                                            <span class="badge bg-success">Finalizado</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Chelsea</p>
+                                        <h4>1</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Emirates Stadium</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Resumen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 3 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-info text-dark">Serie A</span>
+                                <span>Jornada 8</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                        
+                                        <p class="mt-2 mb-0">Milan</p>
+                                        <h4>2</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">6 Oct 2023</p>
+                                            <span class="badge bg-success">Finalizado</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                       
+                                        <p class="mt-2 mb-0">Napoli</p>
+                                        <h4>2</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>San Siro</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Resumen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partido 4 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-light d-flex justify-content-between">
+                                <span class="badge bg-warning text-dark">Bundesliga</span>
+                                <span>Jornada 6</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center text-center">
+                                    <div class="col-4">
+                                      
+                                        <p class="mt-2 mb-0">Leipzig</p>
+                                        <h4>1</h4>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="match-info">
+                                            <p class="mb-1">5 Oct 2023</p>
+                                            <span class="badge bg-success">Finalizado</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                     
+                                        <p class="mt-2 mb-0">Leverkusen</p>
+                                        <h4>3</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <small>Red Bull Arena</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Resumen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Xplambeit - Estadísticas de Fútbol</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
